@@ -10,6 +10,8 @@ License URI: license.txt
 Tags: dark, light, white, black, gray, one-column, two-columns, left-sidebar, right-sidebar, fixed-width, flexible-width, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
 */
 
+$mobileMax: 319px;
+
 @mixin max($maxwidth: $width) {
 	@media (max-width: $maxwidth) {
 		@content
@@ -592,6 +594,12 @@ a:hover {
 				}
 		  }
 		}
+
+		+ * {
+			@include max(319px) {
+				display: none;
+			}
+		}
 	}
 }
 
@@ -607,21 +615,21 @@ a:hover {
   text-align: right;
 
 	@include max(319px) {
-		clear: both;
-		font-size: 24px;
-		line-height: 1;
+		clear: none;
+		font-size: 20px;
+		line-height: 55px;
 		margin-left: 0;
-		margin-top: 1em;
-		padding: 15px;
+		margin-top: 0;
+		padding: 15px 5px;
 		position: static;
-		text-align: center;
+		text-align: right;
 	}
 
 	span {
 		font-size:24px;
 
 		@include max(319px) {
-			display: block;
+			display: none;
 			font-size: 20px;
 		}
 	}
@@ -657,6 +665,7 @@ a:hover {
 	width:auto !important;
 
 	@include max(319px) {
+		display: none;
 		font-size: 24px;
 		line-height: 1;
 		margin-left: 0;
@@ -673,6 +682,7 @@ a:hover {
 	top: 0;
 
 	@include max(319px) {
+		display: none;
 		position: static;
 		text-align: center;
 	}
@@ -711,6 +721,10 @@ a:hover {
 	display: block;
 	margin: 0 auto 6px;
 	margin-top:-7px;
+
+	@include max(319px) {
+		margin-top: 0;
+	}
 
 	&:after {
 	  clear: both;
@@ -916,8 +930,8 @@ a:hover {
 	padding: 1.625em 0 0;
 	max-width:1000px;
 	display:block;
+	padding: 5%;
 }
-#main{margin-top:0px !important;}
 .page-title {
 	color: #666;
 	font-size: 10px;
@@ -2929,10 +2943,12 @@ iframe {
 	#branding {
 		border-top: none !important;
 		padding: 0;
+
+		.hgroup {
+			margin: 0;
+		}
 	}
-	#branding .hgroup {
-		margin: 0;
-	}
+
 	#site-title a {
 		font-size: 21pt;
 	}
@@ -3418,62 +3434,70 @@ ul.valid li{
 	clear: left;
 	font: 14px Helvetica,Arial,sans-serif;
 	margin-top:40px;
+
+	form {
+		display: block;
+		position: relative;
+		text-align: left;
+		padding: 10px 3%;
+	}
+
+	label {
+		display: block;
+		font-size: 16px;
+		padding-bottom: 10px;
+		font-weight: bold;
+	}
+
+	input.email {
+		display: block;
+		padding: 8px 0;
+		margin: 0 4% 10px 0;
+		text-indent: 5px;
+		width: 376px;
+		min-width: 130px;
+	  max-width: 100%;
+	}
+
+	input {
+		border: 1px solid #999;
+		-webkit-appearance: none;
+	}
+
+	.clear {
+		clear: none;
+		display: inline;
+	}
+
+	input.button {
+		display: block;
+		width: 226px;
+		margin: 0 0 10px 0;
+		min-width: 90px;
+	}
+
+	.button {
+		clear: both;
+		background-color: #aaa;
+		border: 0 none;
+		border-radius: 4px;
+		color: #FFFFFF;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 15px;
+		font-weight: bold;
+		height: 32px;
+		line-height: 32px;
+		margin: 0 5px 10px 0;
+		padding: 0;
+		text-align: center;
+		text-decoration: none;
+		vertical-align: top;
+		white-space: nowrap;
+		width: auto;
+	}
 }
-#mc_embed_signup form {
-	display: block;
-	position: relative;
-	text-align: left;
-	padding: 10px 0 10px 3%;
-}
-#mc_embed_signup label {
-	display: block;
-	font-size: 16px;
-	padding-bottom: 10px;
-	font-weight: bold;
-}
-#mc_embed_signup input.email {
-	display: block;
-	padding: 8px 0;
-	margin: 0 4% 10px 0;
-	text-indent: 5px;
-	width: 376px;
-	min-width: 130px;
-  max-width: 100%;
-}
-#mc_embed_signup input {
-	border: 1px solid #999;
-	-webkit-appearance: none;
-}
-#mc_embed_signup .clear {
-	clear: none;
-	display: inline;
-}
-#mc_embed_signup input.button {
-	display: block;
-	width: 226px;
-	margin: 0 0 10px 0;
-	min-width: 90px;
-}
-#mc_embed_signup .button {
-	clear: both;
-	background-color: #aaa;
-	border: 0 none;
-	border-radius: 4px;
-	color: #FFFFFF;
-	cursor: pointer;
-	display: inline-block;
-	font-size: 15px;
-	font-weight: bold;
-	height: 32px;
-	line-height: 32px;
-	margin: 0 5px 10px 0;
-	padding: 0;
-	text-align: center;
-	text-decoration: none;
-	vertical-align: top;
-	white-space: nowrap;
-	width: auto;
-}
+
 #contact_form{
 	background-color:#eee;
 	padding: 8px;

@@ -527,6 +527,9 @@ a:hover {
           #branding .hgroup > a img {
             margin-top: 10px;
             margin-left: 10px; } }
+    @media (max-width: 319px) {
+      #branding .hgroup + * {
+        display: none; } }
 
 .phone_header {
   color: #000;
@@ -540,19 +543,19 @@ a:hover {
   text-align: right; }
   @media (max-width: 319px) {
     .phone_header {
-      clear: both;
-      font-size: 24px;
-      line-height: 1;
+      clear: none;
+      font-size: 20px;
+      line-height: 55px;
       margin-left: 0;
-      margin-top: 1em;
-      padding: 15px;
+      margin-top: 0;
+      padding: 15px 5px;
       position: static;
-      text-align: center; } }
+      text-align: right; } }
   .phone_header span {
     font-size: 24px; }
     @media (max-width: 319px) {
       .phone_header span {
-        display: block;
+        display: none;
         font-size: 20px; } }
 
 #site-title {
@@ -584,6 +587,7 @@ a:hover {
   width: auto !important; }
   @media (max-width: 319px) {
     #site-description {
+      display: none;
       font-size: 24px;
       line-height: 1;
       margin-left: 0;
@@ -598,6 +602,7 @@ a:hover {
   top: 0; }
   @media (max-width: 319px) {
     .facebooktweeter {
+      display: none;
       position: static;
       text-align: center; } }
   .facebooktweeter a {
@@ -628,6 +633,9 @@ a:hover {
   display: block;
   margin: 0 auto 6px;
   margin-top: -7px; }
+  @media (max-width: 319px) {
+    #access {
+      margin-top: 0; } }
   #access:after {
     clear: both;
     content: '';
@@ -804,10 +812,8 @@ a:hover {
   clear: both;
   padding: 1.625em 0 0;
   max-width: 1000px;
-  display: block; }
-
-#main {
-  margin-top: 0px !important; }
+  display: block;
+  padding: 5%; }
 
 .page-title {
   color: #666;
@@ -2714,9 +2720,8 @@ iframe {
   #branding {
     border-top: none !important;
     padding: 0; }
-
-  #branding .hgroup {
-    margin: 0; }
+    #branding .hgroup {
+      margin: 0; }
 
   #site-title a {
     font-size: 21pt; }
@@ -3223,61 +3228,54 @@ ul.valid li {
   clear: left;
   font: 14px Helvetica,Arial,sans-serif;
   margin-top: 40px; }
-
-#mc_embed_signup form {
-  display: block;
-  position: relative;
-  text-align: left;
-  padding: 10px 0 10px 3%; }
-
-#mc_embed_signup label {
-  display: block;
-  font-size: 16px;
-  padding-bottom: 10px;
-  font-weight: bold; }
-
-#mc_embed_signup input.email {
-  display: block;
-  padding: 8px 0;
-  margin: 0 4% 10px 0;
-  text-indent: 5px;
-  width: 376px;
-  min-width: 130px;
-  max-width: 100%; }
-
-#mc_embed_signup input {
-  border: 1px solid #999;
-  -webkit-appearance: none; }
-
-#mc_embed_signup .clear {
-  clear: none;
-  display: inline; }
-
-#mc_embed_signup input.button {
-  display: block;
-  width: 226px;
-  margin: 0 0 10px 0;
-  min-width: 90px; }
-
-#mc_embed_signup .button {
-  clear: both;
-  background-color: #aaa;
-  border: 0 none;
-  border-radius: 4px;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
-  font-size: 15px;
-  font-weight: bold;
-  height: 32px;
-  line-height: 32px;
-  margin: 0 5px 10px 0;
-  padding: 0;
-  text-align: center;
-  text-decoration: none;
-  vertical-align: top;
-  white-space: nowrap;
-  width: auto; }
+  #mc_embed_signup form {
+    display: block;
+    position: relative;
+    text-align: left;
+    padding: 10px 3%; }
+  #mc_embed_signup label {
+    display: block;
+    font-size: 16px;
+    padding-bottom: 10px;
+    font-weight: bold; }
+  #mc_embed_signup input.email {
+    display: block;
+    padding: 8px 0;
+    margin: 0 4% 10px 0;
+    text-indent: 5px;
+    width: 376px;
+    min-width: 130px;
+    max-width: 100%; }
+  #mc_embed_signup input {
+    border: 1px solid #999;
+    -webkit-appearance: none; }
+  #mc_embed_signup .clear {
+    clear: none;
+    display: inline; }
+  #mc_embed_signup input.button {
+    display: block;
+    width: 226px;
+    margin: 0 0 10px 0;
+    min-width: 90px; }
+  #mc_embed_signup .button {
+    clear: both;
+    background-color: #aaa;
+    border: 0 none;
+    border-radius: 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 5px 10px 0;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+    white-space: nowrap;
+    width: auto; }
 
 #contact_form {
   background-color: #eee;
