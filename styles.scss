@@ -121,7 +121,7 @@ body {
 	max-width: 1000px;
 	width: 1000px;
 
-	@include max(319px) {
+	@include max($mobileMax) {
 		width: auto;
 	}
 }
@@ -131,7 +131,7 @@ body {
 #primary {
 	float: left;
 
-  @include max(319px) {
+  @include max($mobileMax) {
     float: none;
   }
 }
@@ -143,7 +143,7 @@ body {
 	float: right;
 	margin-top: 0px;
 
-  @include max(319px) {
+  @include max($mobileMax) {
     float: none;
     width: auto;
   }
@@ -578,7 +578,7 @@ a:hover {
 		> a {
 			float: left;
 
-			@include max(319px) {
+			@include max($mobileMax) {
 				width: 50%;
 			}
 
@@ -588,7 +588,7 @@ a:hover {
 			  margin-left:30px;
 			  float:left;
 
-				@include max(319px) {
+				@include max($mobileMax) {
 					margin-top: 10px;
 					margin-left: 10px;
 				}
@@ -596,7 +596,7 @@ a:hover {
 		}
 
 		+ * {
-			@include max(319px) {
+			@include max($mobileMax) {
 				display: none;
 			}
 		}
@@ -614,7 +614,7 @@ a:hover {
 	top: 0;
   text-align: right;
 
-	@include max(319px) {
+	@include max($mobileMax) {
 		clear: none;
 		font-size: 20px;
 		line-height: 55px;
@@ -628,7 +628,7 @@ a:hover {
 	span {
 		font-size:24px;
 
-		@include max(319px) {
+		@include max($mobileMax) {
 			display: none;
 			font-size: 20px;
 		}
@@ -664,7 +664,7 @@ a:hover {
 	letter-spacing:-2px;
 	width:auto !important;
 
-	@include max(319px) {
+	@include max($mobileMax) {
 		display: none;
 		font-size: 24px;
 		line-height: 1;
@@ -681,7 +681,7 @@ a:hover {
 	left:484px;
 	top: 0;
 
-	@include max(319px) {
+	@include max($mobileMax) {
 		display: none;
 		position: static;
 		text-align: center;
@@ -690,7 +690,7 @@ a:hover {
 	a {
 		float: left;
 
-		@include max(319px) {
+		@include max($mobileMax) {
 			display: inline-block;
 			min-height: 70px;
 			float: none;
@@ -722,7 +722,7 @@ a:hover {
 	margin: 0 auto 6px;
 	margin-top:-7px;
 
-	@include max(319px) {
+	@include max($mobileMax) {
 		margin-top: 0;
 	}
 
@@ -776,10 +776,18 @@ a:hover {
 		border-right-width:2px;
 		border-right-color:#4d4d4d;
 
-		@include max(319px) {
+		@include max($mobileMax) {
 			border-right: none;
 			display: block;
 			float: none;
+
+			&:focus,
+			&:hover {
+				> ul {
+					display: block;
+					position: static;
+				}
+			}
 		}
 
 		&:last-child {
@@ -800,8 +808,9 @@ a:hover {
 			background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#252525), to(#0a0a0a)); /* older webkit syntax */
 			background: -webkit-linear-gradient(#252525, #0a0a0a);
 
-			@include max(319px) {
-				display: none;
+			@include max($mobileMax) {
+				// display: none;
+				float: none;
 			}
 		}
 	}
@@ -816,6 +825,71 @@ a:hover {
 		font-family: Arial, Helvetica, sans-serif;
 		font-weight: bold;
 		text-transform: uppercase;
+	}
+
+	.menu-item-has-children {
+		@include max($mobileMax) {
+			padding-right: 50px;
+			position: relative;
+
+			&:before {
+				border-color: #FFF transparent;
+				border-style: solid;
+				border-width: 5px 5px 0;
+				content: '';
+				position: absolute;
+				right: 20px;
+				top: 17px;
+			}
+
+			> a {
+			}
+
+			&:focus,
+			&:active,
+			&:hover {
+				> ul {
+					display: block;
+					float: none;
+					position: static;
+					width: auto;
+
+					a {
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+
+	.nav-mobile-button {
+		background-color: #d31118;
+		color: #FFF;
+		display: none;
+		padding: 8px;
+		text-align: center;
+		text-transform: uppercase;
+
+		@include max($mobileMax) {
+			display: block;
+		}
+	}
+
+	.menu-menu-1-container {
+		@include max($mobileMax) {
+			display: none;
+		}
+	}
+
+	input {
+		left: -999px;
+		position: absolute;
+	}
+
+	input:checked + .menu-menu-1-container {
+		@include max($mobileMax) {
+			display: block;
+		}
 	}
 }
 
@@ -2576,7 +2650,7 @@ p.comment-form-comment {
 	overflow: hidden;
 
   .widget-area {
-    @include max(319px) {
+    @include max($mobileMax) {
       padding: 10px;
     }
 
@@ -2642,7 +2716,7 @@ iframe {
 	margin-left:20px;
 	margin-top:0px;
 
-  @include max(319px) {
+  @include max($mobileMax) {
     float: none;
     width: auto;
   }
@@ -3117,7 +3191,7 @@ iframe {
 	width: 68%;
 	margin-left: 2%;
 
-  @include max(319px) {
+  @include max($mobileMax) {
     width: auto;
     margin-left: 0;
   }
@@ -3562,7 +3636,7 @@ img{
 #text-6{
     width: 118%;
 
-    @include max(319px) {
+    @include max($mobileMax) {
       width: auto;
     }
 
@@ -3575,4 +3649,8 @@ img{
 }
 .left iframe{
     border: 0;
+}
+
+.promo_slider {
+	max-width: 100%;
 }

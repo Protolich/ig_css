@@ -679,7 +679,10 @@ a:hover {
       #access li {
         border-right: none;
         display: block;
-        float: none; } }
+        float: none; }
+        #access li:focus > ul, #access li:hover > ul {
+          display: block;
+          position: static; } }
     #access li:last-child {
       border-right: none; }
     #access li li {
@@ -699,7 +702,7 @@ a:hover {
       background: -webkit-linear-gradient(#252525, #0a0a0a); }
       @media (max-width: 319px) {
         #access li li {
-          display: none; } }
+          float: none; } }
   #access a {
     color: #EEE;
     display: block;
@@ -710,6 +713,44 @@ a:hover {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-transform: uppercase; }
+  @media (max-width: 319px) {
+    #access .menu-item-has-children {
+      padding-right: 50px;
+      position: relative; }
+      #access .menu-item-has-children:before {
+        border-color: #FFF transparent;
+        border-style: solid;
+        border-width: 5px 5px 0;
+        content: '';
+        position: absolute;
+        right: 20px;
+        top: 17px; }
+      #access .menu-item-has-children:focus > ul, #access .menu-item-has-children:active > ul, #access .menu-item-has-children:hover > ul {
+        display: block;
+        float: none;
+        position: static;
+        width: auto; }
+        #access .menu-item-has-children:focus > ul a, #access .menu-item-has-children:active > ul a, #access .menu-item-has-children:hover > ul a {
+          width: auto; } }
+  #access .nav-mobile-button {
+    background-color: #d31118;
+    color: #FFF;
+    display: none;
+    padding: 8px;
+    text-align: center;
+    text-transform: uppercase; }
+    @media (max-width: 319px) {
+      #access .nav-mobile-button {
+        display: block; } }
+  @media (max-width: 319px) {
+    #access .menu-menu-1-container {
+      display: none; } }
+  #access input {
+    left: -999px;
+    position: absolute; }
+  @media (max-width: 319px) {
+    #access input:checked + .menu-menu-1-container {
+      display: block; } }
 
 *:first-child + html #access {
   margin-top: 0px !important; }
@@ -3351,3 +3392,6 @@ img {
 
 .left iframe {
   border: 0; }
+
+.promo_slider {
+  max-width: 100%; }
