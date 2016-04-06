@@ -10,7 +10,7 @@ License URI: license.txt
 Tags: dark, light, white, black, gray, one-column, two-columns, left-sidebar, right-sidebar, fixed-width, flexible-width, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
 */
 
-$mobileMax: 319px;
+$mobileMax: 320px;
 
 @mixin max($maxwidth: $width) {
 	@media (max-width: $maxwidth) {
@@ -902,10 +902,6 @@ a:hover {
 	padding-left:21px;
 	padding-right:21px;
   }
-  #access li:last-child a {
-	padding-left:24px;
-	padding-right:24px;
-  }
 }
 
 #access li li:last-child a {
@@ -1004,7 +1000,10 @@ a:hover {
 	padding: 1.625em 0 0;
 	max-width:1000px;
 	display:block;
-	padding: 5%;
+
+	@include max($mobileMax) {
+		padding: 5%;
+	}
 }
 .page-title {
 	color: #666;
@@ -2656,7 +2655,7 @@ p.comment-form-comment {
 
     &:nth-child(2) {
       img {
-        max-width: 112px;
+        max-width: 100px;
       }
     }
   }
@@ -3653,4 +3652,12 @@ img{
 
 .promo_slider {
 	max-width: 100%;
+}
+
+.facebook-likebox {
+	margin-right: -9px;
+
+	@include max($mobileMax) {
+		display: none;
+	}
 }
