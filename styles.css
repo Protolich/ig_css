@@ -89,13 +89,13 @@ body {
   margin: 2em auto;
   max-width: 1000px;
   width: 1000px; }
-  @media (max-width: 320px) {
+  @media (max-width: 480px) {
     #page {
       width: auto; } }
 
 #primary {
   float: left; }
-  @media (max-width: 320px) {
+  @media (max-width: 480px) {
     #primary {
       float: none; } }
 
@@ -106,7 +106,7 @@ body {
   width: 27.3%;
   float: right;
   margin-top: 0px; }
-  @media (max-width: 320px) {
+  @media (max-width: 480px) {
     #secondary {
       float: none;
       width: auto; } }
@@ -515,7 +515,7 @@ a:hover {
     margin: 0px; }
     #branding .hgroup > a {
       float: left; }
-      @media (max-width: 320px) {
+      @media (max-width: 480px) {
         #branding .hgroup > a {
           width: 50%; } }
       #branding .hgroup > a img {
@@ -523,11 +523,11 @@ a:hover {
         margin-top: 30px;
         margin-left: 30px;
         float: left; }
-        @media (max-width: 320px) {
+        @media (max-width: 480px) {
           #branding .hgroup > a img {
             margin-top: 10px;
             margin-left: 10px; } }
-    @media (max-width: 320px) {
+    @media (max-width: 480px) {
       #branding .hgroup + * {
         display: none; } }
 
@@ -541,21 +541,20 @@ a:hover {
   padding: 0;
   top: 0;
   text-align: right; }
-  @media (max-width: 320px) {
+  @media (max-width: 480px) {
     .phone_header {
-      clear: none;
-      font-size: 20px;
-      line-height: 55px;
+      clear: both;
+      line-height: 1;
       margin-left: 0;
       margin-top: 0;
       padding: 15px 5px;
       position: static;
-      text-align: right; } }
+      text-align: center; } }
   .phone_header span {
     font-size: 24px; }
-    @media (max-width: 320px) {
+    @media (max-width: 480px) {
       .phone_header span {
-        display: none;
+        display: block;
         font-size: 20px; } }
 
 #site-title {
@@ -585,7 +584,7 @@ a:hover {
   text-transform: uppercase;
   letter-spacing: -2px;
   width: auto !important; }
-  @media (max-width: 320px) {
+  @media (max-width: 480px) {
     #site-description {
       display: none;
       font-size: 24px;
@@ -600,14 +599,14 @@ a:hover {
   position: absolute;
   left: 484px;
   top: 0; }
-  @media (max-width: 320px) {
+  @media (max-width: 480px) {
     .facebooktweeter {
       display: none;
       position: static;
       text-align: center; } }
   .facebooktweeter a {
     float: left; }
-    @media (max-width: 320px) {
+    @media (max-width: 480px) {
       .facebooktweeter a {
         display: inline-block;
         min-height: 70px;
@@ -615,6 +614,38 @@ a:hover {
   .facebooktweeter img {
     margin-left: 5px;
     margin-top: 15px; }
+
+/* =Social Nav
+-------------------------------------------------------------- */
+.nav-social {
+  padding: 20px 24px;
+  text-align: right; }
+  @media (max-width: 480px) {
+    .nav-social {
+      padding: 10px 15px 0;
+      margin-left: 50%; } }
+  .nav-social a {
+    border-radius: 2px;
+    display: inline-block;
+    height: 32px;
+    width: 32px; }
+  .nav-social img {
+    display: block; }
+
+.nav-social-insta {
+  background-color: #125688; }
+
+.nav-social-gplus {
+  background-color: #DC4E41; }
+
+.nav-social-youtube {
+  background-color: #CD201F; }
+
+.nav-social-fbook {
+  background-color: #3B5998; }
+
+.nav-social-twitter {
+  background-color: #55ACEE; }
 
 /* =Menu
 -------------------------------------------------------------- */
@@ -633,7 +664,7 @@ a:hover {
   display: block;
   margin: 0 auto 6px;
   margin-top: -7px; }
-  @media (max-width: 320px) {
+  @media (max-width: 480px) {
     #access {
       margin-top: 0; } }
   #access:after {
@@ -675,7 +706,7 @@ a:hover {
     border-right-style: solid;
     border-right-width: 2px;
     border-right-color: #4d4d4d; }
-    @media (max-width: 320px) {
+    @media (max-width: 480px) {
       #access li {
         border-right: none;
         display: block;
@@ -700,7 +731,7 @@ a:hover {
       background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#252525), to(#0a0a0a));
       /* older webkit syntax */
       background: -webkit-linear-gradient(#252525, #0a0a0a); }
-      @media (max-width: 320px) {
+      @media (max-width: 480px) {
         #access li li {
           float: none; } }
   #access a {
@@ -713,7 +744,7 @@ a:hover {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     text-transform: uppercase; }
-  @media (max-width: 320px) {
+  @media (max-width: 480px) {
     #access .menu-item-has-children {
       padding-right: 50px;
       position: relative; }
@@ -739,16 +770,16 @@ a:hover {
     padding: 8px;
     text-align: center;
     text-transform: uppercase; }
-    @media (max-width: 320px) {
+    @media (max-width: 480px) {
       #access .nav-mobile-button {
         display: block; } }
-  @media (max-width: 320px) {
+  @media (max-width: 480px) {
     #access .menu-menu-1-container {
       display: none; } }
   #access input {
     left: -999px;
     position: absolute; }
-  @media (max-width: 320px) {
+  @media (max-width: 480px) {
     #access input:checked + .menu-menu-1-container {
       display: block; } }
 
@@ -850,7 +881,7 @@ a:hover {
   padding: 1.625em 0 0;
   max-width: 1000px;
   display: block; }
-  @media (max-width: 320px) {
+  @media (max-width: 480px) {
     #main {
       padding: 5%; } }
 
@@ -2429,7 +2460,7 @@ p.comment-form-comment {
   padding-bottom: 20px;
   padding-top: 20px;
   overflow: hidden; }
-  @media (max-width: 320px) {
+  @media (max-width: 480px) {
     #supplementary .widget-area {
       padding: 10px; } }
   #supplementary .widget-area:nth-child(2) img {
@@ -2483,7 +2514,7 @@ iframe {
   text-align: left;
   margin-left: 20px;
   margin-top: 0px; }
-  @media (max-width: 320px) {
+  @media (max-width: 480px) {
     .copyright {
       float: none;
       width: auto; } }
@@ -2917,7 +2948,7 @@ iframe {
 .pagedetail {
   width: 68%;
   margin-left: 2%; }
-  @media (max-width: 320px) {
+  @media (max-width: 480px) {
     .pagedetail {
       width: auto;
       margin-left: 0; } }
@@ -3379,7 +3410,7 @@ img {
 
 #text-6 {
   width: 118%; }
-  @media (max-width: 320px) {
+  @media (max-width: 480px) {
     #text-6 {
       width: auto; } }
   #text-6 table {
@@ -3396,6 +3427,6 @@ img {
 
 .facebook-likebox {
   margin-right: -9px; }
-  @media (max-width: 320px) {
+  @media (max-width: 480px) {
     .facebook-likebox {
       display: none; } }

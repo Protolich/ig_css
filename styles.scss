@@ -10,7 +10,7 @@ License URI: license.txt
 Tags: dark, light, white, black, gray, one-column, two-columns, left-sidebar, right-sidebar, fixed-width, flexible-width, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
 */
 
-$mobileMax: 320px;
+$mobileMax: 480px;
 
 @mixin max($maxwidth: $width) {
 	@media (max-width: $maxwidth) {
@@ -615,21 +615,20 @@ a:hover {
   text-align: right;
 
 	@include max($mobileMax) {
-		clear: none;
-		font-size: 20px;
-		line-height: 55px;
+		clear: both;
+		line-height: 1;
 		margin-left: 0;
 		margin-top: 0;
 		padding: 15px 5px;
 		position: static;
-		text-align: right;
+		text-align: center;
 	}
 
 	span {
 		font-size:24px;
 
 		@include max($mobileMax) {
-			display: none;
+			display: block;
 			font-size: 20px;
 		}
 	}
@@ -703,6 +702,44 @@ a:hover {
 	}
 }
 
+
+/* =Social Nav
+-------------------------------------------------------------- */
+.nav-social {
+	padding: 20px 24px;
+	text-align: right;
+
+	@include max($mobileMax) {
+		padding: 10px 15px 0;
+		margin-left: 50%;
+	}
+
+	a {
+		border-radius: 2px;
+		display: inline-block;
+		height: 32px;
+		width: 32px;
+	}
+	img {
+		display: block;
+	}
+}
+
+.nav-social-insta {
+	background-color: #125688;
+}
+.nav-social-gplus {
+	background-color: #DC4E41;
+}
+.nav-social-youtube {
+	background-color: #CD201F;
+}
+.nav-social-fbook {
+	background-color: #3B5998;
+}
+.nav-social-twitter {
+	background-color: #55ACEE;
+}
 
 
 /* =Menu
